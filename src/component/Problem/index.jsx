@@ -14,7 +14,8 @@ const Problem = () => {
   const [isClick, setIsClick] = useState(false);
 
   useEffect(() => {
-    setCount(count + 1);
+    console.log("hi");
+    setCount((count) => count + 1);
   }, [isClick]);
 
   return (
