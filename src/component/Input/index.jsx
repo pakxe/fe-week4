@@ -32,6 +32,7 @@ function InputSample() {
       setData([data[0], e.target.value]);
     }
   };
+
   const onReset = () => {
     // 여기는 reset 버튼을 눌렀을때 발생하는 함수입니다!!
     setData(["", ""]);
@@ -43,9 +44,15 @@ function InputSample() {
         <input
           name="name"
           placeholder="이름"
-          onChange={onChange} //변화가 생기면 괄호안의 함수 실행
+          onChange={onChange}
+          value={data[0]}
         />
-        <input name="nickname" placeholder="닉네임" onChange={onChange} />
+        <input
+          value={data[1]}
+          name="nickname"
+          placeholder="닉네임"
+          onChange={onChange}
+        />
         <button onClick={onReset}>초기화</button>
       </InputWrapper>
 
